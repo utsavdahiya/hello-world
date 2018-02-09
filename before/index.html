@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>David Chu's China Bistro</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Oxygen:400,300,700' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet" type="text/css">
+  </head>
+
+<body>
+  <header id="header-nav" class="navbar navbar-default">
+    <div class="container"><!--container instead of container-fluid(which spreads to a 100% width) has been used so that the conent in nav bar stays in the centre-->
+      <div class="navbar-header"> <!--Everything on the left side in the navigation bar, incuding name of the restraunt-->
+        <a href="index.html" class="pull-left visible-md visible-lg">
+          <div id="logo-img" alt="Logo image"></div>
+        </a>
+
+        <div class="navbar-brand">
+          <a href="index.html"><h1>David Chu's China Bistro</h1></a>
+          <p> <!--Kosher logo and text-->
+            <img src="images/star-k-logo.png" alt="Kosher certification">
+            <span>Kosher Certified</span>
+          </p>
+        </div>
+<!--collapsing menu button, the data-target="collapsable-nav"(it is javascript) is what targets the glyph icons in the unordered list-->
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#collapsable-nav" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span><!--these are the three dashes on the button icon-->
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+<!--menu icons in the collapsable toggle bar, notice id="collapsable-nav"-->
+      <div id="collapsable-nav" class="collapse navbar-collapse">
+        <ul id="nav-list" class="nav navbar-nav navbar-right">
+          <li>
+            <a href="menu-categories.html">
+              <span class="glyphicon glyphicon-cutlery"></span><br class="hidden-xs">Menu
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="glyphicon glyphicon-info-sign"></span><br class="hidden-xs">About
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="glyphicon glyphicon-certificate"></span><br class="hidden-xs">Awards
+            </a>
+          </li>
+          <li id="phone" class="hidden-xs">
+            <a href="tel:140-602-5008">
+              <span>410-602-5008</span>
+            </a>
+            <div>We Deliver</div>
+          </li>
+        </ul>
+      </div><!--End of #collapsable-nav-->
+    </div><!--End of Header-->
+  </header>
+    <!--call button goes here-->
+  <button id="phoneBar" type="button" class="btn btn-primary btn-lg visible-xs">
+    <a  id="phoone" href="tel:140-602-5008">
+      <span class="glyphicon glyphicon-earphone"></span>140-602-5008
+    </a>
+  </button>
+
+  <div id="main-content" class="container">
+      <div class="jumbotron">
+        <img src="images/jumbotron_768.jpg" alt="Picture of restaurant" class="img-responsive visible-xs">
+      </div>  
+
+      <!--TILES-->
+      <div id="tiles" class="row">
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <a href="menu-categories.html">
+            <div id="menu-tile"><span>Menu</span></div>
+          </a>
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+          <a href="single-caegory.html">
+            <div id="spl-tile"><span>Specials</span></div>
+          </a>
+        </div>
+        <div class="col-md-4 col-sm-12 col-xs-12">
+          <a href="https://www.google.co.in/maps/place/Barbeque+Nation+-+Delhi+-+Pitampura/@28.7125564,77.1049937,13z/data=!4m8!1m2!2m1!1sbbq+nation!3m4!1s0x390d02335d6b032b:0x52a72eb126890b70!8m2!3d28.6922582!4d77.1516288?dcr=0" target="_blank">
+            <div id="map-tile">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d55987.74172034484!2d77.10499374045418!3d28.71255635892188!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d02335d6b032b%3A0x52a72eb126890b70!2sBarbeque+Nation+-+Delhi+-+Pitampura!5e0!3m2!1sen!2sin!4v1518095907425" width="100%" height="250" frameborder="0" style="border:0" allowfullscreen></iframe>
+              <span>Map</span></div>
+          </a>
+        </div>       
+      </div><!--End of Tiles-->
+  </div><!--End of #main-content-->
+
+  <!-- Footer -->
+  <footer class="panel-footer">
+    <div class="container">
+      <div class="row">
+        <section id="hours" class="col-sm-4">
+          <span>Hours:</span><br>
+          Sun-Thurs: 11:15am - 10:0pm<br>
+          Fri: 11:15am - 2:30pm<br>
+          Saturday Closed
+          <hr class="visible-xs">
+        </section>
+        <section id="address" class="col-sm-4">
+          <span>Address:</span><br>
+           101 & 102, First Floor, Agarwal Corporate Heights, Plot No. A-7, Netaji Subash Place, Pitampura, New Delhi, Delhi 110034
+           <p>*Delivery within 3-4 km, with minimum order of 500</p>
+        </section>
+        <section id="testimonials" class="col-sm-4">
+          <p>"The best restraunt I've been to!"</p>
+          <p>"Amazing food, Great service. I'll be back for more"</p>
+        </section>
+      </div>
+      <div class="text-center">&copy; Copyright David Chu's China Bistro 2018</div>
+    </div>
+  </footer>
+
+  <!-- jQuery (Bootstrap JS plugins depend on it) -->
+  <script src="js/jquery-2.1.4.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>

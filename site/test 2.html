@@ -13,20 +13,42 @@
 .style {
 	font-family: arial, helvetica, serif;
 	color: #bb00ff;
-
-
 }
 
+p.highlight{
+	font-style: italic;
+	color: magenta;
+}
+.highlight{
+	color: white;
+	background-color: green;
+}
+.highlight.mainpoint{
+	color: red;
+	background-color: black;
+}
+
+span{
+	background-color: grey;
+}
 </style>
 
 </head>
 
 <body>
 
-<p>You can get commonly used font combinations from <a href="http://www.w3schools.com/cssref/css_websafe_fonts.asp">http://www.w3schools.com/cssref/css_websafe_fonts.asp</a>. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam quod necessitatibus a ullam dolorum amet reprehenderit sit laudantium reiciendis aperiam. </p>
+<h1 class="highlight"> Element with class selector</h1>
+<div><a href="#section2">hello section2</a></div>
 
+<p id="section1">You can get commonly used font combinations from <a href="http://www.w3schools.com/cssref/css_websafe_fonts.asp">http://www.w3schools.com/cssref/css_websafe_fonts.asp</a>. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam quod necessitatibus a ullam dolorum amet reprehenderit sit laudantium reiciendis aperiam. </p>
+<section>
 <p class="style">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam fugiat repudiandae fugit porro commodi.</p>
-
+<p id="section2" class="highlight">
+haskjdajkdbakjbckacascasfa
+asdasdadadadsdsadasda</p>
+</section>
+<div class="mainpoint highlight">This is the main point of the article</div>
+<span>span tag</span>
 </body>
 
 </html>

@@ -1,0 +1,243 @@
+body {
+  font-size: 16px;
+  color: #fff;
+  background-color: #61122f;
+  font-family: 'Oxygen', sans-serif;
+}
+
+/* HEADER */
+#header-nav{
+	background-color: #f6b319;
+	border-radius: 0px;
+	border: 0px;
+/*	height: 100px;
+*/}
+#logo-img{
+ 	background: url('../images/restaurant-logo_large.png') no-repeat;
+ 	width: 150px;
+ 	height: 150px;
+ 	margin: 10px 15px 10px 0px;
+}
+
+.navbar-brand{/*this class encloses the restraunt name, logo, kosher..*/
+	padding-top: 25px;
+}
+.navbar-brand h1{ /*Restraunt name*/
+	font-family: 'Lora', serif;
+	color: #557c3e;
+	font-size: 1.5em;
+	text-transform: uppercase;
+	font-weight: bold;
+	text-shadow: 1px 1px 1px black;
+	margin-top: 0;
+	margin-bottom: 0;
+	line-height: .74;
+}
+.navbar-brand a:hover, .navbrand a:focus{
+	text-decoration: none;/*to remove the underline from link*/
+}
+.navbar-brand p{
+	color: #000;
+	text-transform: uppercase;
+	font-size: .7em;
+	margin-top: 15px;
+}
+.navbar-brand p span{/*K star */
+	vertical-align: middle;
+}
+#nav-list{/*tagets the menu icons which are strutured as an unordered list*/
+	margin-top: 10px;
+}
+#nav-list a{
+	color: #951C49;
+	text-align: center;
+}
+#nav-list a:hover{
+	background: #E7E7E7;
+}
+#phone {
+	margin-top: 5px;
+}
+#phone a {
+	text-align: right;
+	padding-bottom: 0;
+}
+#phone div {
+	color: #557c3e;
+	text-align: right;
+	padding-right: 15px;
+}
+.navbar-header button.navbar-toggle, .navbar .icon-bar {
+	border: 1px solid #61122f;
+}
+.navbar-header button.navbar-toggle {
+	margin-top: 20px;
+}
+#phoneBar{
+	background-color: #f6b319;
+	display: block;
+	width: 96%;
+/*	position: relative;*/
+	margin: 0 auto 10 auto;
+}
+#phoone{
+	color: #61122f;
+}
+/*END HEADER*/
+
+/*HOME PAGE*/
+#menu-tile, #spl-tile, #map-tile{
+	height: 250px;
+	width: 100%;
+	margin-bottom: 15px;
+	position: relative;
+	border: 2px solid #3F0c1F;
+	overflow: hidden;
+}
+#menu-tile:hover, #spl-tile:hover, #map-tile:hover {
+	box-shadow: 0 1px 5px 1px #cccccc;
+}
+#menu-tile span, #spl-tile span, #map-tile span {
+	position: absolute;
+	bottom: 0px;
+	right: 0;
+	width: 100%;
+	text-align: center;
+	font-size: 1.6em;
+	text-transform: uppercase;
+	background-color: #000;
+	color: #fff;
+	opacity: .8;
+}
+#menu-tile {
+	background: url('../images/menu-tile.jpg') no-repeat;
+	background-position: center;
+}
+#spl-tile {
+	background: url('../images/specials-tile.jpg') no-repeat;
+	background-position: center;
+}
+/*End Homepage*/
+
+/*FOOTER*/
+.panel-footer {
+	margin-top: 30px;
+	padding-top: 35px;
+	padding-bottom: 30px;
+	background-color: #222;
+	border-top: 0;
+}
+/*****************Large devices only***************/
+@media(min-width: 1200px) {
+	.container .jumbotron {
+		background: url('../images/jumbotron_1200.jpg') no-repeat;
+		height: 675px;
+		box-shadow: 0 0 50px #3F0c1F;
+		border: 2px solid #3F0c1F;
+	}
+}
+
+/**************Medium size devices only**************/
+@media(min-width: 992px) and (max-width: 1199px) {
+	/*Header*/
+	#logo-img {
+		background: url('../images/restaurant-logo_medium.png') no-repeat;
+		width: 100px;
+		height: 100px;
+		margin: 5px 5px 5px 0;
+	}
+	#navbar-header {
+		height: 100px;
+	}
+	/*END HEADER*/
+
+	/*Home page*/
+	.jumbotron {
+		background: url('../images/jumbotron_992.jpg') no-repeat;
+		height: 558px;
+		box-shadow: 0 0 50px #3F0c1F;
+		border: 2px solid #3F0c1F;
+	}
+	/*END Homepage*/
+}
+
+/********Small devices only********/
+@media(min-width: 768px) and (max-width: 991px) {
+	/*HEADER*/
+	#header-nav{
+		height: auto;
+	}
+	/*	Home page*/
+	.jumbotron {
+		background: url('../images/jumbotron_768.jpg') no-repeat;
+		height: 432px;
+		box-shadow: 0 0 50px #3F0c1F;
+		border: 2px solid #3F0c1F;
+	}
+	/*END Homepage*/
+}
+
+/****** Extra small devices *******/
+@media(max-width: 767px) {
+	/*Header*/
+	#header-nav {
+		height: 100px;
+	}
+	.navbar-brand {
+		padding-top: 10px;
+		height: 80px;
+	}
+	.navbar-brand h1 {/*restraunt name*/
+		padding-top: 10px;
+		font-size: 5vw;
+	}
+	.navbar-brand p{ /*kosher cert*/
+		font-size: .6em;
+		margin-top: 12px;
+	}
+	.navbar-brand p img {
+		height: 20px;
+	}
+	#collapsable-nav a {/*includes the glyph icon and menu text*/
+		font-size: 1.2em;
+		background-color: #f6b319;
+	}
+	#collapsable-nav a span {
+		font-size: 1em;
+		margin-right: 5px;
+	}
+	/***End Header***/
+	/*Home Page*/
+	.container .jumbotron {
+		padding: 0px;
+		margin-top: 30px
+		box-shadow: 0 0 50px #3F0c1F;
+		border: 2px solid #3F0c1F;
+	}
+	div .jumbotron {
+		background-image: none;
+		height: auto;
+	}
+	#menu-tile, #spl-tile {
+		width: 360px;
+		margin: 0 auto 15px;
+	}
+}
+
+/*************Super Extra Small devices***********/
+@media(max-width: 479px) {
+	/* Header */
+	.navbar-brand h1 { /* Restraunt name */
+		padding-top: 5px;
+		font-size: 5.7vw;
+	}
+	.navbar-header button.navbar-toggle {
+		margin-top: 50px;
+	}
+	/*Home Page*/
+	#menu-tile, #spl-tile {
+		width: 280px;
+		margin: 0 auto 15px;
+	}
+
+}

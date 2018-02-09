@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<ul> <!-- bulleted list, ie unordered list-->
+	<li>...</li>
+	<li>...</li>
+</ul>
+
+<ol> <!-- numbered lsit, ie ordered list-->
+	<li>...</li>
+	<li>...</li>
+</ol>
+
+HTML enities:
+	&nbsp; non breaking space, helps in combined wraping of words
+	&lt; "<"
+	&gt; ">"
+	&amp; "&"
+	&copy; "copyright symbol"
+
+use <meta charset="utf-8"> to tell browser which character set to use
+
+Fragment idnetifiers:
+	<p id="section1"></p>
+	<p class="class name"></p>
+
+<img src="img address" height="300", width="200"> specify height and width values to allow browser to allocate space accordingly
+
+CSS selectors:
+	element selector
+		p{
+		color: blue;
+	}
+
+	class selector
+		.class_name{
+		color: blue;
+		font-size: 20px
+	}
+
+	id selector
+		#id_name{
+
+	}
+
+Combining selectors:
+	element with class selector
+		p.class_name{	<!-- every p element that has class="class_name"-->
+			font-weight: bold;
+			font-style: italic;
+		}
+
+	child selector 
+		article > p{	<!-- evey <p> element that is direct child of the <article> element-->
+			color: blue;
+		}
+
+	descendant selector
+		article p{	<!-- every <p> element that is anywhere inside(at any level) of <article> element-->
+
+		}
+
+	.colored p{
+		<!-- every p that is inside(at any level) of any element with attribute class="colored"-->
+	}
+
+	article > .colored{
+		<!-- every element with attribute class="colored" which is a direct child of an <article> element-->
+	}
+
+"!important" can be used to override any other css style
+	eg: padding-left: 15px !important;
+
+Pseudo-class selectors
+	:link
+	:visited
+	:hover
+	:active
+	:nth-child(...3/odd/even)
+
+Use external style sheets saved as .css and link it to the html file
+	<link rel="stylesheet" href="style.css">
+
+Conflict resolution
+	when declarations target same element:
+		then origin precendence wins, ie the one declared later in the html document wins, in case of a linked css file, consider it to be where it has been declared.
+	same element targetted but different attributes
+		the styles will merge
+	Specifity wins
+		style=""	#id  	class=""/pseudo class/attribute	#of elements
+		 _____		 _____				 _____					 _____
+		|     |		|	  |				|	  |					|	  |
+		|_____|		|_____|				|_____|					|_____|
+
+position: it affects the offset of the element
+		  
+		  static;(Default value. Elements render in order, as they appear in the document flow, any changes specified will not apply)
+		  
+		  absolute; (top: y, left: x) (The element is positioned relative to its first positioned (not static) ancestor element, which is the <html> element by default, it takes the element out of the regular document flow)
+		  
+		  relative; (The element is positioned relative to its normal position, so "left:20px" adds 20 pixels to the element's LEFT position, but the element's original position in the doc is still reserved)
+		  
+		  fixed; (fixed w.r.t the browser screen,)<!--kinda floats the 			element in the position, ie appears in the same place 			even as we scroll the window--> this also takes the element out of the regular flow of content
+		  
+		  sticky; The element is positioned based on the user's scroll position 
+				A sticky element toggles between relative and fixed, depending on the scroll position. It is positioned relative until a given offset position is met in the viewport - then it "sticks" in place (like position:fixed).
+
+BOX model:
+	margin-> it is the distance that the element will maintain form other elements. When two elements are placed side to side, their magins will add up, that is they will be margin1+margin2 distance apart. But when two elements are placed vertically together then only the greater margin will be maintained, ie max(margin1,margin2)
+		border: thickness, solid/dashed color;
+			padding: top, right, bottom, left;
+				element(height-width)
+use margin: top auto bottom auto; to centre the element
+
+use box-sizing: border-box  to include the padding and the margin within the height and width of border.
+box-sizing is not inherited, so it may have to be applied as:
+
+* { <!-- use this this to targey every element in the file and apply a propery, NOTE: it will be considered as if it has been defined for each element specifically-->
+	box-sizing: border-box;
+	also margin: 0; <!--this maybe used to override browser default margin-->
+}
+
+OVERFLOW
+	if we constrain the height/width of an element, but the content in that element cannot fit within the constraints, then it will spill over or overflow out of the box and even overlap with the next content on the page.
+	This can be handled with the overflow attribute
+		overflow: visible <!--by default, it will spill--> 
+				  hidden <!--this will clip the contents at the margin of 					the box-->
+				  auto <!--this will generate automatic scroll bars where 		required(vertical/horizontal)-->
+				  scroll <!--this will generate permanent scroll bars, 			wether needed or not-->	
+
+To set an image as background for box
+	background-image: url("address");
+	background-repeat: no repeat
+					   repeat-x/y
+					   round
+					   ...
+
+MEDIA QUERIES
+@media (max-width: 800px) {...}
+@media (min-width: 800px) {...}
+@media (orientation: potrait) {...}
+@media (screen) {...}
+@media (print) {...}
+
+Normally we specify a base query and then define some media queries to target specific screen sizes
+combining media queries
+	AND: @media (min-width: 786px) and (max-width: 991px) {...}
+	OR: @media (max-width: 991px) , (min-width: 992px) {...}5
+
+RESPONSIVE DESIGN
+use 12 column grid layout
+	8.33%=1/12th of the browser screen
+	25%=4 columns, each containg 3 grid columns
+use viewport meta tag to turn off default mobile zoominig
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+TWITTER BOOTSTRAP
+	>It follows 12-column grid system
+	>every column layout should be under a class="container/container-fluid" element
+	>inside class="row" element, you can define columns in the format:
+	<div class="container">
+    <div class="row">
+      <div class="col-md-4 col-sm-6">Col 1</div>
+      <div class="col-md-4 col-sm-6">Col 2</div>
+      <div class="col-md-4 col-sm-6">Col 3</div>
+    </div>
+    </div>
+
+ 	Also define the following in order to allow javascript rendering:
+ 	  <!-- jQuery (Bootstrap JS plugins depend on it) -->
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+
+    >You can use class="col-sx-#no_of_columns" if  no other rules apply to make sure that all columns remain horizontal at all times irrespective of the screen size and do not stack upon one another
+
+placehold.in can be used fir place holder for images
