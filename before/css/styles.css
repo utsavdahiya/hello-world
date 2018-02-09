@@ -77,8 +77,8 @@ body {
 	background-color: #f6b319;
 	display: block;
 	width: 96%;
-/*	position: relative;*/
-	margin: 0 auto 10 auto;
+	margin: 0px auto 10px auto;
+
 }
 #phoone{
 	color: #61122f;
@@ -232,7 +232,9 @@ body {
 		font-size: 5.7vw;
 	}
 	.navbar-header button.navbar-toggle {
-		margin-top: 50px;
+/*		margin-top: 50px;
+*/	
+	margin-right: 5px;
 	}
 	/*Home Page*/
 	#menu-tile, #spl-tile {
